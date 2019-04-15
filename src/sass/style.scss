@@ -1,0 +1,12 @@
+@import "variables.scss";
+@import "mixin.scss";
+
+
+
+.container {
+    width: $large;
+    margin: auto;
+}
+
+@import "Cases/cases.scss";
+@import "Order/order.scss";
