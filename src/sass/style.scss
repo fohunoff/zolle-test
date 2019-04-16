@@ -1,7 +1,13 @@
 @import "variables.scss";
 @import "mixin.scss";
 
+* {
+    box-sizing: border-box;
+}
 
+.body {
+    font-family: 'Roboto', sans-serif;
+}
 
 .container {
     width: $large;
@@ -9,4 +15,5 @@
 }
 
 @import "Cases/cases.scss";
+@import "Benefit/benefit.scss";
 @import "Order/order.scss";

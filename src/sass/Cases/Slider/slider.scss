@@ -1,0 +1,32 @@
+.slider {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+
+    width: $large;
+    height: $slider-hight;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(17, 38, 74, 0.2);
+    overflow: hidden;
+}
+
+.slider__image {
+    min-width: $slider-image-width;
+    
+    background-image: url(../img/slide_1.jpg);
+    background-size: 100%;
+
+    z-index: 1;
+}
+
+.slider__cards {
+    display: flex;
+    flex-direction: row;
+
+    transition: transform 1s;
+}
+
+@import "Card/card.scss";
+@import "Pagination/pagination.scss";

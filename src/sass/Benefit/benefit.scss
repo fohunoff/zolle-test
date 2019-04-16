@@ -1,0 +1,30 @@
+.benefit {
+    margin-bottom: 60px;
+}
+
+.benefit__title {
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.benefit__list {
+    @include list-reset();
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.benefit__item {
+    width: 295px;
+}
+
+.benefit__item-title {
+    color: $gold;
+    font-size: 20px;
+}
+
+.benefit__item-text {
+    font-size: 15px;
+}

@@ -1,3 +1,10 @@
 .cases {
-    
+    margin-bottom: 40px;
 }
+
+.cases__title {
+    text-align: center;
+    font-size: 40px;
+}
+
+@import "Slider/slider.scss";

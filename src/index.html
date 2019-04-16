@@ -7,12 +7,14 @@
     
     <title>Наши кейсы</title>
     
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body class="body">
     <section class="cases">
         <div class="container">
-            <h1>Наши кейсы</h1>
+            <h1 class="cases__title">Наши кейсы</h1>
             
             <div class="slider">
                 
@@ -22,9 +24,9 @@
                     
                     <div class="card">
                         <img class="card__image" src="img/slide_1.jpg" alt="Слайд 1">
-                        <h2 class="card__title">Готовое решение с доходом<br><span>874 000</span> руб/мес</h2>
-                        <h3 class="card__subtitle">Результаты</h3>
-                        <ul>
+                        <h2 class="card__title">1. Готовое решение с доходом<br><span class="number">874 000</span> руб/мес</h2>
+                        <h3 class="card__subtitle">Результаты:</h3>
+                        <ul class="card__list">
                             <li><b>Инвестиции:</b> 64 000 000 рублей (~140 000 рублей за м2).</li>
                             <li><b>Арендный доход:</b> 874 000 руб/мес с ежегодной индексацией 7%.</li>
                             <li>ROI – 16,4%, без учета роста стоимости самого помещения</li>
@@ -36,9 +38,37 @@
                     
                     <div class="card">
                         <img class="card__image" src="img/slide_1.jpg" alt="Слайд 1">
-                        <h2 class="card__title">Готовое решение с доходом<br><span>874 000</span> руб/мес</h2>
-                        <h3 class="card__subtitle">Результаты</h3>
+                        <h2 class="card__title">2. Разделение помещений<br>для максимизации дохода</h2>
+                        <h3 class="card__subtitle">Результаты:</h3>
                         <ul>
+                            <li><b>Инвестиции:</b> 21 870 000 рублей  с рассрочкой платежа на 6 месяцев.</li>
+                            <li><b>Арендный доход:</b> 243 000 рублей в месяц с ежегодной индексацией 5%</li>
+                            <li>ROI – 13,3%, без учета роста стоимости самого помещения</li>
+                            <li>Стоимость самого помещения выросла к сегодняшнему дню на 30%</li>
+                        </ul>
+                        <h3 class="card__subtitle">Что сделано:</h3>
+                        <p>Купили для клиента готовое коммерческое помещение площадью 162 м2 в ЖК Вива по цене 135 000 за м2.</p>
+                    </div>
+
+                    <div class="card">
+                        <img class="card__image" src="img/slide_1.jpg" alt="Слайд 1">
+                        <h2 class="card__title">3. Готовое решение с доходом<br><span class="number">874 000</span> руб/мес</h2>
+                        <h3 class="card__subtitle">Результаты:</h3>
+                        <ul class="card__list">
+                            <li><b>Инвестиции:</b> 64 000 000 рублей (~140 000 рублей за м2).</li>
+                            <li><b>Арендный доход:</b> 874 000 руб/мес с ежегодной индексацией 7%.</li>
+                            <li>ROI – 16,4%, без учета роста стоимости самого помещения</li>
+                            <li>ROI ~46%, с учетом роста стоимости самого помещения</li>
+                        </ul>
+                        <h3 class="card__subtitle">Что сделано:</h3>
+                        <p>При оценке количества коммерческих помещений в проекте будущего комплекса ЛСР и планируемой инфраструктуры района поняли, что есть недостаток продуктовых магазинов – всего 2 небольших магазина на 15 000 жителей.</p>
+                    </div>
+
+                    <div class="card">
+                        <img class="card__image" src="img/slide_1.jpg" alt="Слайд 1">
+                        <h2 class="card__title">4. Готовое решение с доходом<br><span class="number">874 000</span> руб/мес</h2>
+                        <h3 class="card__subtitle">Результаты:</h3>
+                        <ul class="card__list">
                             <li><b>Инвестиции:</b> 64 000 000 рублей (~140 000 рублей за м2).</li>
                             <li><b>Арендный доход:</b> 874 000 руб/мес с ежегодной индексацией 7%.</li>
                             <li>ROI – 16,4%, без учета роста стоимости самого помещения</li>
@@ -53,7 +83,7 @@
                 <!-- создание повесить на js -->
                 <div class="pagination">
                     <div class="pagination__dots"></div>
-                    <p class="pagination__count"><span class="prev">1</span>/<span class="next">4</span></p>
+                    <p class="pagination__count"><span class="current"></span>/<span class="total"></span></p>
                     <button class="pagination__button pagination__button--prev" type="button">Предыдущий слайд</button>
                     <button class="pagination__button pagination__button--next" type="button">Следующий слайд</button>
                 </div>
@@ -62,34 +92,37 @@
     </section>
     <section class="benefit">
         <div class="container">
-            <h1>Финансовая выгода от актива</h1>
-            <ul>
-                <li>
-                    <h2>Доходность</h2>
-                    <p>Объекты с доходностью от 12% годовых. (аренда от 100 000 рублей в месяц).</p>
+            <h1 class="benefit__title">Финансовая выгода от актива</h1>
+            <ul class="benefit__list">
+                <li class="benefit__item">
+                    <h2 class="benefit__item-title">Доходность</h2>
+                    <p class="benefit__item-text">Объекты с доходностью от 12% годовых. (аренда от 100 000 рублей в месяц).</p>
                 </li>
-                <li>
-                    <h2>Окупаемость</h2>
-                    <p>Каждому потенциальному покупателю предоставляется плановый расчет доходности и окупаемости объекта, который покупатель сможет при необходимости использовать для сравнения с другими активами.</p>
+                <li class="benefit__item">
+                    <h2 class="benefit__item-title">Окупаемость</h2>
+                    <p class="benefit__item-text">Каждому потенциальному покупателю предоставляется плановый расчет доходности и окупаемости объекта, который покупатель сможет при необходимости использовать для сравнения с другими активами.</p>
                 </li>
-                <li>
-                    <h2>Рост стоимости актива</h2>
-                    <p>Объекты, купленные на этапе стройки, возрастают в цене к моменту сдачи в среднем на 30 %.</p>
-                </li><li>
-                    <h2>Ликвидность</h2>
-                    <p>Каждому потенциальному покупателю предоставляется плановый расчет доходности и окупаемости объекта, который покупатель сможет при необходимости использовать для сравнения с другими активами.</p>
+                <li class="benefit__item">
+                    <h2 class="benefit__item-title">Рост стоимости актива</h2>
+                    <p class="benefit__item-text">Объекты, купленные на этапе стройки, возрастают в цене к моменту сдачи в среднем на 30 %.</p>
+                </li>
+                <li class="benefit__item">
+                    <h2 class="benefit__item-title">Ликвидность</h2>
+                    <p class="benefit__item-text">Каждому потенциальному покупателю предоставляется плановый расчет доходности и окупаемости объекта, который покупатель сможет при необходимости использовать для сравнения с другими активами.</p>
                 </li>
             </ul>
         </div>
     </section>
     <section class="order">
-        <div class="container">
-            <h1>Подбор лучших вариантов</h1>
-            <p>Заполните форму из 4 вопроссов, и мы подберем 3 самых перспективных  варианта под ваши требования в течение 15 минут.</p>
+        <div class="container order__block">
+            <div class="order__description">
+                <h1>Подбор лучших вариантов</h1>
+                <p>Заполните форму из 4 вопроссов, и мы подберем 3 самых перспективных  варианта под ваши требования в течение 15 минут.</p>
+            </div>
             
-            <form class="form" id="form" action="/" method="POST">
+            <form class="form order__form" id="form" action="/" method="POST">
 
-                <div class="form__progress"></div>
+                <div class="form__progress">прогресс заполнения</div>
                 
                 <div class="form__slider">
                     
@@ -121,7 +154,7 @@
                     
                     <div class="form__item">
                         <p>4. Укажите прочие требования и пожелания:</p>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Опишите здесь"></textarea>
+                        <textarea name="" id="" cols="30" rows="5" placeholder="Опишите здесь"></textarea>
                         <p>Заполните поле</p>
 
                         <label for="phohe">Ваш номер телефона</label>
@@ -133,11 +166,14 @@
                     
                 </div>
                 
-                <button type="submit">Готово</button>
+                <button class="form__button" type="submit">Готово</button>
             </form>
-            
+
             <!-- Инфо о том, что форма отправлена формировать в js -->
         </div>
+        <div class="order__filter"></div>
     </section>
+
+    <script src="js/case-slider.js"></script>
 </body>
 </html>

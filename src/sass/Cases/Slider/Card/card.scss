@@ -1,0 +1,34 @@
+.card {
+    width: 395px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    margin-right: 135px;
+
+    font-size: 15px;
+}
+
+// .card:not(:first-of-type) {
+//     display: none;
+// }
+
+.card__image {
+    display: none;
+}
+
+.card__title {
+    font-family: Playfair Display;
+    color: $gold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+
+    .number {
+        font-size: 45px;
+    }
+}
+
+.card__list {
+    @include list-reset();
+    line-height: 20px;
+}
