@@ -1,5 +1,27 @@
 .cases {
     margin-bottom: 40px;
+    
+    .container {
+        position: relative;
+        
+        &::before {
+            position: absolute;
+            content: 'Кейсы';
+            
+            bottom: 200px;
+            right: -370px;
+            
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 200px;
+            color: white;
+            transform: rotate(90deg);
+            
+            background: linear-gradient(0deg, $gold 33%, $gold--light 66%);
+            background-clip: text;
+            color: transparent;
+        }
+    }
 }
 
 .cases__title {
