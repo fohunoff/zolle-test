@@ -88,7 +88,7 @@ gulp.task('serve', function () {
     server: 'build/'
   });
 
-  gulp.watch('src/sass/**/*.scss').on('change', gulp.series(['style']));
+  gulp.watch('src/sass/**/*.scss', gulp.series(['style']));
   gulp.watch('src/*.html').on('change', gulp.series(['copy-html', server.reload]));
   gulp.watch('src/js/**/*.js').on('change', gulp.series(['copy-js', server.reload]));
 });
