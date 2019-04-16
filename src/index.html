@@ -8,7 +8,7 @@
     <title>Наши кейсы</title>
     
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="body">
@@ -24,7 +24,7 @@
                     
                     <div class="card">
                         <img class="card__image" src="img/slide_1.jpg" alt="Слайд 1">
-                        <h2 class="card__title">1. Готовое решение с доходом<br><span class="number">874 000</span> руб/мес</h2>
+                        <h2 class="card__title">Готовое решение с доходом<br><span class="number">874 000</span> руб/мес</h2>
                         <h3 class="card__subtitle">Результаты:</h3>
                         <ul class="card__list">
                             <li><b>Инвестиции:</b> 64 000 000 рублей (~140 000 рублей за м2).</li>
@@ -37,8 +37,8 @@
                     </div>
                     
                     <div class="card">
-                        <img class="card__image" src="img/slide_1.jpg" alt="Слайд 1">
-                        <h2 class="card__title">2. Разделение помещений<br>для максимизации дохода</h2>
+                        <img class="card__image" src="img/slide_2.jpg" alt="Слайд 1">
+                        <h2 class="card__title">Разделение помещений<br>для максимизации дохода</h2>
                         <h3 class="card__subtitle">Результаты:</h3>
                         <ul>
                             <li><b>Инвестиции:</b> 21 870 000 рублей  с рассрочкой платежа на 6 месяцев.</li>
@@ -49,10 +49,10 @@
                         <h3 class="card__subtitle">Что сделано:</h3>
                         <p>Купили для клиента готовое коммерческое помещение площадью 162 м2 в ЖК Вива по цене 135 000 за м2.</p>
                     </div>
-
+                    
                     <div class="card">
-                        <img class="card__image" src="img/slide_1.jpg" alt="Слайд 1">
-                        <h2 class="card__title">3. Готовое решение с доходом<br><span class="number">874 000</span> руб/мес</h2>
+                        <img class="card__image" src="img/slide_3.jpg" alt="Слайд 1">
+                        <h2 class="card__title">Готовое решение с доходом<br><span class="number">874 000</span> руб/мес</h2>
                         <h3 class="card__subtitle">Результаты:</h3>
                         <ul class="card__list">
                             <li><b>Инвестиции:</b> 64 000 000 рублей (~140 000 рублей за м2).</li>
@@ -63,10 +63,10 @@
                         <h3 class="card__subtitle">Что сделано:</h3>
                         <p>При оценке количества коммерческих помещений в проекте будущего комплекса ЛСР и планируемой инфраструктуры района поняли, что есть недостаток продуктовых магазинов – всего 2 небольших магазина на 15 000 жителей.</p>
                     </div>
-
+                    
                     <div class="card">
-                        <img class="card__image" src="img/slide_1.jpg" alt="Слайд 1">
-                        <h2 class="card__title">4. Готовое решение с доходом<br><span class="number">874 000</span> руб/мес</h2>
+                        <img class="card__image" src="img/slide_4.jpg" alt="Слайд 1">
+                        <h2 class="card__title">Готовое решение с доходом<br><span class="number">874 000</span> руб/мес</h2>
                         <h3 class="card__subtitle">Результаты:</h3>
                         <ul class="card__list">
                             <li><b>Инвестиции:</b> 64 000 000 рублей (~140 000 рублей за м2).</li>
@@ -80,12 +80,17 @@
                     
                 </div>
                 
-                <!-- создание повесить на js -->
                 <div class="pagination">
-                    <div class="pagination__dots"></div>
-                    <p class="pagination__count"><span class="current"></span>/<span class="total"></span></p>
-                    <button class="pagination__button pagination__button--prev" type="button">Предыдущий слайд</button>
-                    <button class="pagination__button pagination__button--next" type="button">Следующий слайд</button>
+                    <div class="pagination__dots">
+                        <ul class="dots">
+                            <li class="dots__item dots__item--active"></li>
+                        </ul>
+                    </div>
+                    <div class="pagination__handlers">
+                        <button class="pagination__button pagination__button--prev" type="button">Предыдущий слайд</button>
+                        <p class="pagination__count"><span class="current">01</span> / <span class="total"></span></p>
+                        <button class="pagination__button pagination__button--next" type="button">Следующий слайд</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,7 +126,7 @@
             </div>
             
             <form class="form order__form" id="form" action="/" method="POST">
-
+                
                 <div class="form__progress">прогресс заполнения</div>
                 
                 <div class="form__slider">
@@ -156,10 +161,10 @@
                         <p>4. Укажите прочие требования и пожелания:</p>
                         <textarea name="" id="" cols="30" rows="5" placeholder="Опишите здесь"></textarea>
                         <p>Заполните поле</p>
-
+                        
                         <label for="phohe">Ваш номер телефона</label>
                         <input id="phone" type="text">
-
+                        
                         <input type="checkbox" name="" id="checkit">
                         <label for="checkit">я принимаю условия передачи информации</label>
                     </div>
@@ -168,12 +173,12 @@
                 
                 <button class="form__button" type="submit">Готово</button>
             </form>
-
+            
             <!-- Инфо о том, что форма отправлена формировать в js -->
         </div>
         <div class="order__filter"></div>
     </section>
-
+    
     <script src="js/case-slider.js"></script>
 </body>
 </html>
