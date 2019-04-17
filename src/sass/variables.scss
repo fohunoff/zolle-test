@@ -4,6 +4,8 @@ $slider-hight: 660px;
 $slider-image-width: 790px;
 $slider-content-width: 580px;
 
+$input-width: 336px;
+
 
 /* brakepoints */
 
@@ -14,6 +16,9 @@ $small: 320px;
 /* COLORS */
 $gray: rgba(17, 38, 74, 0.5);
 $gold: #C69642;
+$gold--dark: #D4AC6B;
 $gold--light: #FBD9A4;
 $blue--light: #173363;
 $blue--dark: #11264A;
+
+$pseudo-list--border: rgba(17, 38, 74, 0.1);

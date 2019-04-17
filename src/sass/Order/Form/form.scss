@@ -1,0 +1,186 @@
+.form {
+    position: relative;
+    background-color: white;
+    overflow-x: hidden;
+    
+    font-size: 15px;
+}
+
+.form__progress {
+    margin: 30px 70px;
+    margin-bottom: 50px;
+    
+    p {
+        font-weight: bold;
+    }
+    
+    .form__progress-bar {
+        display: inline-block;
+        position: relative;
+        
+        width: 100px;
+        height: 8px;
+        
+        border-radius: 4px;
+        background-color: $gold;
+        
+        transition: width 1s;
+        
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 8px;
+
+            border-radius: 4px;
+            background-color: $gray;
+            opacity: 0.2;
+
+            z-index: -1;
+        }
+    }
+}
+
+.form__slider {
+    display: flex;
+    flex-direction: row;
+    
+    width: 740px;
+    transition: transform 1s;
+}
+
+.form__item {
+    min-width: 670px;
+    margin-left: 70px;
+}
+
+.form__item--flex {
+    display: flex;
+    flex-direction: row;
+
+    > div:nth-child(2) {
+        margin-top: 49px;
+        margin-left: 40px;
+    }
+}
+
+.custom-field {
+    position: relative;
+    display: inline-block;
+
+    width: 340px;
+
+    z-index: 2;
+
+    &::after {
+        position: absolute;
+        content: '';
+        
+        top: -2px;
+        left: -2px;
+        
+        width: calc(100% + 4px);
+        height: 53px;
+        
+        border-radius: 5px;
+        background-image: linear-gradient(45deg, $gold 25%, $gold--light 66%);
+        z-index: -1;
+    }
+}
+
+.custom-field--texarea::after {
+    height: 126px;
+}
+
+.custom-field--phone {
+    width: 240px;
+
+    &::before {
+        position: absolute;
+        content: 'Ваш номер телефона';
+
+        top: -20px;
+        left: 4px;
+
+        font-size: 10px;
+        color: $gray;
+    }
+}
+
+.input[name="phone"] {
+    background-image: url(../img/phone.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+
+    padding-left: 40px;
+}
+
+.input,
+.texarea {
+    margin: 0;
+    border: none;
+    outline: none;
+    
+    width: 100%;
+    padding: 16px;
+    
+    font-size: 15px;
+    
+    border-radius: 5px;
+    background-color: white;
+    z-index: 2;
+    
+    &::placeholder {
+        font-size: 15px;
+        line-height: 21px;
+    }
+}
+
+.texarea {
+    resize: none;
+}
+
+.form__checkbox {
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.form__checkbox input {
+    display: none;
+}
+
+.form__checkbox label {
+    position: relative;
+    
+    padding-left: 25px;
+
+    &::before {
+        position: absolute;
+        content: '';
+
+        top: -2px;
+        left: 2px;
+        width: 16px;
+        height: 16px;
+
+        background-color: $gold--light;
+        background-position: center;
+        background-size: 12px 12px;
+        background-repeat: no-repeat;
+    }
+}
+
+.form__checkbox input:checked + label {
+    &::before {
+        background-image: url(../img/check.png);
+    }
+}
+
+@import "pseudo-select.scss";
+@import "button.scss";
+@import "tips.scss";

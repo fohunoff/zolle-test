@@ -126,53 +126,69 @@
             </div>
             
             <form class="form order__form" id="form" action="/" method="POST">
+
+                <button class="button-goback" type="button">Назад</button>
                 
-                <div class="form__progress">прогресс заполнения</div>
+                <div class="form__progress">
+                    <p>1 из 4</p>
+                    <div class="form__progress-bar"></div>
+                </div>
                 
-                <div class="form__slider">
-                    
+                <div class="form__slider">                  
                     <div class="form__item">
                         <p>1. Какую сумму вы хотите инвестировать?</p>
-                        <input type="text" placeholder="Введите сумму в рублях ">
-                        <p>Заполните поле слева</p>
+                        <div class="custom-field">
+                            <input class="input" type="text" placeholder="Введите сумму в рублях" value="">
+                            <div class="tip tip--left" data-tip="Заполните поле слева "></div>
+                        </div>
                     </div>
                     
                     <div class="form__item">
                         <p>2. В каком году недвижимость должна начать приносить доход?</p>
-                        <select name="" id="">
-                            <option value="2019">2019</option>
-                            <option value="2020">2020</option>
-                            <option value="2021">2021</option>
-                        </select>
-                        <p>Заполните поле слева</p>
+                        <div class="custom-field">
+                            <input class="input" name="year" type="text" placeholder="Выберите год" value="" readonly>
+                            <div class="pseudo-select"></div>
+                            <div class="tip tip--left" data-tip="Выберите в поле слева"></div>
+                        </div>
                     </div>
                     
                     <div class="form__item">
                         <p>3. В каком районе вы хотели бы помещение?</p>
-                        <select name="" id="">
-                            <option value="1">Адмиралтейский</option>
-                            <option value="2">Василеостровский</option>
-                            <option value="3">Выборский</option>
-                        </select>
-                        <p>Заполните поле слева</p>
+                        <div class="custom-field">
+                            <input class="input" name="district" type="text" placeholder="Выберите район" value="" readonly>
+                            <div class="pseudo-select"></div>
+                            <div class="tip tip--left" data-tip="Выберите в поле слева"></div>
+                        </div>
                     </div>
                     
-                    <div class="form__item">
-                        <p>4. Укажите прочие требования и пожелания:</p>
-                        <textarea name="" id="" cols="30" rows="5" placeholder="Опишите здесь"></textarea>
-                        <p>Заполните поле</p>
+                    <div class="form__item form__item--flex">
+                        <div>
+                            <p>4. Укажите прочие требования и пожелания:</p>
+                            <div class="custom-field custom-field--texarea">
+                                <textarea class="texarea" name="note" cols="60" rows="5" placeholder="Опишите здесь"></textarea>
+                            </div>
+                        </div>
                         
-                        <label for="phohe">Ваш номер телефона</label>
-                        <input id="phone" type="text">
-                        
-                        <input type="checkbox" name="" id="checkit">
-                        <label for="checkit">я принимаю условия передачи информации</label>
+                        <div>
+                            <div class="custom-field custom-field--phone">
+                                <input class="input" name="phone" id="phone" type="text" placeholder="">
+                                <div class="tip tip--top" data-tip="Заполните поле"></div>
+                            </div>
+                            
+                            <div class="form__checkbox">
+                                <input type="checkbox" name="confidentional" id="checkit" checked>
+                                <label for="checkit">я принимаю условия передачи информации</label>
+                            </div>
+                        </div>
                     </div>
                     
                 </div>
                 
+                <div class="form__arrow"></div>
                 <button class="form__button" type="submit">Готово</button>
             </form>
+            
+            <ul class="pseudo-select__list"></ul>
             
             <!-- Инфо о том, что форма отправлена формировать в js -->
         </div>
@@ -180,5 +196,9 @@
     </section>
     
     <script src="js/case-slider.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/pseudo-list.js"></script>
+
+    <script src="js/mock-data.js"></script>
 </body>
 </html>
