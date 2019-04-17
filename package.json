@@ -24,6 +24,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "imagemin-jpeg-recompress": "^6.0.0",
     "node-sass": "^4.9.4"
   }
 }

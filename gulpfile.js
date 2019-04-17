@@ -14,6 +14,7 @@ var autoprefixer = require('autoprefixer'); // это плагин для postcs
 /* Опимизации и минификации */
 var cssminify = require('gulp-csso');
 var imagemin = require('gulp-imagemin');
+var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 
 var del = require('del');
 
@@ -41,6 +42,11 @@ gulp.task('images', function () {
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
+      imageminJpegRecompress({
+        progressive: true,
+        max: 80,
+        min: 70
+      }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest('build/img'));
