@@ -1,6 +1,8 @@
 'use strict';
 
 (function () {
+    var orderBlock = document.querySelector('.order__block');
+    
     var form = document.forms['form'];
     var button = form.querySelector('.form__button');
     var backButton = form.querySelector('.button-goback');
@@ -35,31 +37,81 @@
         formProgress.textContent = current + ' из 4'; // Прописываем номер текущего слайда формы
         progressBar.style.width = PROGRESS_SECTION_WIDTH * current + 'px';
         pseudoList.classList.remove('pseudo-select__list--show'); // Скрываем выпадающий список
-
+        
         if (current == 4) {
             button.textContent = 'Отправить';
-
+            
         } else {
             button.textContent = 'Далее';
         }
         
     }
     
+    /** Создание и вставка блока после ответа от сервера
+     * 
+     * @param {Node} parentNode - блок, куда будет вставляться сообщение после отправки формы
+     * 
+     */
+    var createSuccessMessage = function (parentNode) {
+        parentNode.textContent = '';
+        
+        var div = document.createElement('div');
+        var title = document.createElement('h1');
+        var info = document.createElement('p');
+        var buy = document.createElement('p');
+        
+        div.classList.add('form__success');
+        
+        title.textContent = 'Приступаем к работе';
+        info.textContent = 'Предоставим 3 отличных варианта уже через 15 минут.';
+        buy.textContent = 'Ожидайте нашего звонка!';
+        
+        div.appendChild(title);
+        div.appendChild(info);
+        div.appendChild(buy);
+        
+        parentNode.appendChild(div);
+    }
+
+    var loading = function (parentNode) {
+        parentNode.textContent = '';
+        
+        var div = document.createElement('div');   
+        div.classList.add('form__success', 'loading');
+        parentNode.appendChild(div);
+    }
+    
+    /** Обработчик успешного ответа от сервера
+    * 
+    * @param {String} response - ответ от сервера
+    * 
+    */
+    var succesHandler = function(response) {
+        if (response === '1') {
+            console.log('succes');
+            createSuccessMessage(orderBlock);            
+        }
+    }
+    
     // Показ следующего поля формы
     button.addEventListener('click', function (evt) {
         evt.preventDefault();
-
+        
         if (current == 4) {
             if (confirm('Подтвердите отправку данных')) {
-                console.log('Отправка формы');
-                console.log('Рисуем успешную отправку');
+                loading(orderBlock);
+                
+                var formData = new FormData(form);
+                formData.append('is_isset_somethihg', 1);
+                window.sendData(formData, succesHandler);
             }
         }
-
+        
         current < total ? current++ : null;
         moveSlide(current);
     });
     
+    // Показ предыдущего поля формы
     backButton.addEventListener('click', function (evt) {
         evt.preventDefault();
         current > 1 ? current-- : null;

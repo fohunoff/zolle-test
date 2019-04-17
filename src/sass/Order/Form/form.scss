@@ -1,9 +1,11 @@
 .form {
     position: relative;
-    background-color: white;
-    overflow-x: hidden;
     
     font-size: 15px;
+    color: $blue--dark;
+    
+    background-color: white;
+    overflow-x: hidden;
 }
 
 .form__progress {
@@ -181,6 +183,32 @@
     }
 }
 
+.form__success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    background-color: white;
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        max-width: 310px;
+        font-size: 18px;   
+    }
+}
+
+.loading {
+    background-image: url(../img/loading.gif);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 @media (max-width: $middle) {
     .form__progress {
