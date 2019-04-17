@@ -3,7 +3,7 @@
 
 * {
     box-sizing: border-box;
-
+    
 }
 
 .body {
@@ -14,6 +14,12 @@
 .container {
     width: $large;
     margin: auto;
+}
+
+@media (max-width: $large) {
+    .container {
+        width: $middle;
+    }
 }
 
 @import "Cases/cases.scss";

@@ -1,4 +1,6 @@
 .benefit {
+    display: flex;
+    flex-direction: row;
     margin-bottom: 60px;
 }
 
@@ -27,4 +29,18 @@
 
 .benefit__item-text {
     font-size: 15px;
+}
+
+@media (max-width: $large) {
+    .benefit__title {
+        text-align: center;
+    }
+
+    .benefit__list {
+        flex-wrap: wrap;
+    }
+
+    .benefit__item {
+        width: 350px;
+    }
 }

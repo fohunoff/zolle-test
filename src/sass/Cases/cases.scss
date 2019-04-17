@@ -30,4 +30,14 @@
     font-size: 40px;
 }
 
+@media (max-width: $large) {
+    .cases {
+        .container {
+            &::before {
+                display: none;  
+            }
+        }
+    }
+}
+
 @import "Slider/slider.scss";

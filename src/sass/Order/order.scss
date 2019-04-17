@@ -65,4 +65,23 @@
     flex-grow: 1;
 }
 
+
+@media (max-width: $large) {
+    .order__block {
+        flex-direction: column;
+
+        width: $middle;
+        height: 700px;
+    }
+
+    .order__description {
+        order: 1;
+        width: 100%;
+    }
+
+    .order__form {
+        order: 2;
+    }
+}
+
 @import "Form/form.scss";

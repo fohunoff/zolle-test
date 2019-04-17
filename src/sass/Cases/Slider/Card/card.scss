@@ -32,3 +32,9 @@
     @include list-reset();
     line-height: 20px;
 }
+
+@media (max-width: $large) {
+    .card {
+        margin-top: -10px;
+    }
+}
