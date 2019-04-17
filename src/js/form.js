@@ -73,6 +73,32 @@
         parentNode.appendChild(div);
     }
 
+     /** Создание и вставка блока после ответа от сервера (ошибка)
+     * 
+     * @param {Node} parentNode - блок, куда будет вставляться сообщение после отправки формы
+     * 
+     */
+    var createErrorMessage = function (parentNode) {
+        parentNode.textContent = '';
+        
+        var div = document.createElement('div');
+        var title = document.createElement('h1');
+        var info = document.createElement('p');
+        
+        div.classList.add('form__success');
+        title.textContent = 'Что-то пошло не так...';
+        info.textContent = 'Попробуйте позвонить нам на прямую: +7 (900) 000-00-00';
+        
+        div.appendChild(title);        
+        div.appendChild(info);        
+        parentNode.appendChild(div);
+    }
+
+    /** Дожидаемся ответа от сервера
+     * 
+     * @param {Node} parentNode - заглушка со спинером
+     * 
+     */
     var loading = function (parentNode) {
         parentNode.textContent = '';
         
@@ -90,6 +116,9 @@
         if (response === '1') {
             console.log('succes');
             createSuccessMessage(orderBlock);            
+        } else {
+            console.log('error');
+            createErrorMessage(orderBlock);
         }
     }
     

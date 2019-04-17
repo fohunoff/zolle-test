@@ -1,14 +1,15 @@
 <?php
 
-// Все данные должны храниться, конечно же, не здесь
-// Этот скрипт, просто простая демонстрация
-
-$login;
-$password;
-$phones = 89110800284;
-$message = 'Новая заявка с сайта Zolle - id:' . time() . '. Проверьте эл.почту.';
-
 function sendSMS () {
+    
+    // Все данные должны храниться, конечно же, не здесь
+    // Этот скрипт, просто простая демонстрация
+
+    $login;
+    $password;
+    $phones;
+    $message = 'Новая заявка с сайта Zolle - id:' . time() . '. Проверьте эл.почту.';
+
     $params = [
         'login'     => $login,
         'psw'       => $password,
@@ -23,7 +24,8 @@ function sendEMAIL ($body) {
 
     // Эта функция просто как пример
     // Чаще всего использую PHPMailer
-    $mail_to = '4f-foxy@mail.ru';
+    
+    $mail_to = '';
     $mail_title = 'Заявка с сайта Zolle';
     
     mail($mail_to, $mail_title, $body);

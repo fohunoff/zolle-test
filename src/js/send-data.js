@@ -3,7 +3,7 @@
 (function () {
     var sendData = function (formData, callback) {
 
-        var url = 'http://zolle-test/build/api/api.php';
+        var url = './api/api.php';
 
         fetch(url, {
             body: formData,
