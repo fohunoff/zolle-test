@@ -31,7 +31,8 @@
 
     border-radius: 5px;
     background-color: white;
-    box-shadow: 0 0 0 2px $pseudo-list--border;
+    box-shadow: 0 0 0 2px $pseudo-list--border,
+                0px 2px 8px 0 $gray;
 
     overflow-y: auto;
     z-index: 10;
@@ -60,5 +61,14 @@
 @media (max-width: $large) {
     .pseudo-select__list {
         top: 515px;
+    }
+}
+
+@media (max-width: $middle) {
+    .pseudo-select__list {
+        top: 445px;
+        left: 20px;
+
+        width: 240px;
     }
 }

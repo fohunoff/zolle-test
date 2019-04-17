@@ -38,3 +38,22 @@
         margin-top: -10px;
     }
 }
+
+@media (max-width: $middle) {
+    .card {
+        width: 280px;
+        margin-top: 0px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .card__title {
+        font-size: 20px;
+
+        .number {
+            font-size: 35px;
+        }
+    }
+    
+}

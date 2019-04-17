@@ -70,13 +70,47 @@
     .order__block {
         flex-direction: column;
 
-        width: $middle;
+        width: $middle - 40px;
         height: 700px;
     }
 
     .order__description {
         order: 1;
         width: 100%;
+    }
+
+    .order__form {
+        order: 2;
+    }
+}
+
+@media (max-width: $middle) {
+    .order {
+        padding: 20px 0;
+    }
+
+    .order__block {
+        flex-direction: column;
+
+        width: $small - 40px;
+        height: 730px;
+    }
+
+    .order__description {
+        order: 1;
+        width: 100%;
+        padding: 25px;
+
+        h1 {
+            font-size: 20px;
+            line-height: 26px;
+            margin-top: 0;
+        }
+        
+        p {
+            font-size: 14px;
+            line-height: 25px;
+        }
     }
 
     .order__form {

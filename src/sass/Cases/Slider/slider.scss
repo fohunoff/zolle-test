@@ -40,5 +40,15 @@
     }
 }
 
+@media (max-width: $middle) {
+    .slider {
+        height: 600px;
+    }
+
+    .slider__image {
+        display: none;
+    }
+}
+
 @import "Card/card.scss";
 @import "Pagination/pagination.scss";

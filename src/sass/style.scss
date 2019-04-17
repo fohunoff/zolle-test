@@ -22,6 +22,12 @@
     }
 }
 
+@media (max-width: $middle) {
+    .container {
+        width: $small;
+    }
+}
+
 @import "Cases/cases.scss";
 @import "Benefit/benefit.scss";
 @import "Order/order.scss";

@@ -27,20 +27,20 @@
         transition: width 1s;
         
         z-index: 1;
-
+        
         &::after {
             position: absolute;
             content: '';
-
+            
             top: 0;
             left: 0;
             width: 400px;
             height: 8px;
-
+            
             border-radius: 4px;
             background-color: $gray;
             opacity: 0.2;
-
+            
             z-index: -1;
         }
     }
@@ -62,7 +62,7 @@
 .form__item--flex {
     display: flex;
     flex-direction: row;
-
+    
     > div:nth-child(2) {
         margin-top: 49px;
         margin-left: 40px;
@@ -72,11 +72,11 @@
 .custom-field {
     position: relative;
     display: inline-block;
-
+    
     width: 340px;
-
+    
     z-index: 2;
-
+    
     &::after {
         position: absolute;
         content: '';
@@ -99,14 +99,14 @@
 
 .custom-field--phone {
     width: 240px;
-
+    
     &::before {
         position: absolute;
         content: 'Ваш номер телефона';
-
+        
         top: -20px;
         left: 4px;
-
+        
         font-size: 10px;
         color: $gray;
     }
@@ -116,7 +116,7 @@
     background-image: url(../img/phone.png);
     background-repeat: no-repeat;
     background-position: 10px center;
-
+    
     padding-left: 40px;
 }
 
@@ -158,16 +158,16 @@
     position: relative;
     
     padding-left: 25px;
-
+    
     &::before {
         position: absolute;
         content: '';
-
+        
         top: -2px;
         left: 2px;
         width: 16px;
         height: 16px;
-
+        
         background-color: $gold--light;
         background-position: center;
         background-size: 12px 12px;
@@ -179,6 +179,42 @@
     &::before {
         background-image: url(../img/check.png);
     }
+}
+
+
+@media (max-width: $middle) {
+    .form__progress {
+        margin: 20px 0px;
+        text-align: center;
+        
+        .form__progress-bar {
+            display: none;
+        }
+    }
+
+    .form__slider {
+        width: 280px;
+    }
+
+    .form__item {
+        min-width: auto;
+        width: 240px;
+        margin-left: 20px;
+        margin-right: 480px;
+    }
+
+    .form__item--flex {
+        flex-direction: column;
+
+        > div:nth-child(2) {
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+    }
+
+    .custom-field {
+        width: 240px;
+    }    
 }
 
 @import "pseudo-select.scss";

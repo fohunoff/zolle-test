@@ -21,8 +21,18 @@
     var current = 1;
     var total = cards.length;
 
-    var SLIDER_OFFSET = 580;
+    var SLIDER_OFFSET = 580; // Ширина слайда + все внешние отступы
+    var MIDDLE_BREAKPOINT = 768; // см. sass/variables.scss
 
+
+
+    var getSliderOffset = function () {
+        if (window.innerWidth < MIDDLE_BREAKPOINT) {
+            SLIDER_OFFSET = 320;
+        } else {
+            SLIDER_OFFSET = 580;
+        };
+    }
 
     /** Устанавливает класс только у активного элемента
      * 
@@ -132,7 +142,13 @@
         setActiveDot(ul, current - 1);
     });
 
+    /** */
+    window.addEventListener('resize', function () {
+        getSliderOffset();
+    });
+
     /* Установка значений по умолчанию */
+    getSliderOffset();
     currentCard.textContent = setCorrectPaginationValue(current);
     totalCards.textContent = setCorrectPaginationValue(total);
     progressBar.appendChild(createListWithDots(total - 1)); // Первый элемент уже есть в разметке

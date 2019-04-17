@@ -40,4 +40,14 @@
     }
 }
 
+@media (max-width: $middle) {
+    .cases {
+        .container {
+            &::before {
+                display: none;  
+            }
+        }
+    }
+}
+
 @import "Slider/slider.scss";

@@ -44,3 +44,18 @@
         width: 350px;
     }
 }
+
+@media (max-width: $large) {
+    .benefit {
+        margin-bottom: 30px;
+    }
+
+    .benefit__title {
+        text-align: left;
+    }
+
+    .benefit__title,
+    .benefit__item{
+        padding: 0 15px;
+    }
+}

@@ -112,3 +112,18 @@
         margin-top: 30px;
     }
 }
+
+@media (max-width: $middle) {
+    .pagination {
+        width: $small;
+        height: auto;
+        margin-left: 0;
+        padding: 0 40px;
+
+        flex-direction: row;
+    }
+
+    .dots {
+        margin-top: 30px;
+    }
+}
